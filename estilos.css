@@ -19,7 +19,8 @@ h1{
 .grid,
 .grid-pixeles,
 .grid-area,
-.grid-repeat
+.grid-repeat,
+.grid-posicion
 {
 	width: 90%;
 	max-width: 1000px;
@@ -33,7 +34,8 @@ h1{
 .grid div,
 .grid-pixeles div,
 .grid-area div,
-.grid-repeat div
+.grid-repeat div,
+.grid-posicion div
 {
 	display: block;
 	padding: 20px;
@@ -57,3 +59,4 @@ h1{
 
 	background: lightpink;
 }
+
