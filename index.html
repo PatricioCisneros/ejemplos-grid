@@ -7,7 +7,8 @@
     
     <title>Ejemplos grid CSS</title>
 
-    <style>
+    <style>        
+
         .grid-pixeles{
 
             display: grid;
@@ -16,8 +17,7 @@
             grid-template-rows: 200px 100px 300px;
         }
 
-        .grid,
-        .grid-pixeles
+        .grid
         {
 
             display: grid;
@@ -27,11 +27,102 @@
             grid-template-rows: 2fr 3fr 1fr;
 
         }
+
+        .grid{
+
+            display: grid;
+
+            /* grid-templatecolumns: 1fr 1fr 1fr 1fr 1fr 1fr */
+            grid-template-columns: repeat(6, 1fr);
+
+            /* grid-template-rows: 2fr 2fr 2fr */
+            grid-template-rows: repeat(3, 2fr);
+
+            grid-gap: 20px;
+
+        }
+
+        .grid-area{
+
+            display: grid;
+
+            grid-gap: 20px;
+
+            grid-template-columns: 1fr 1fr 1fr;
+
+            grid-template-rows: repeat(4, auto);
+
+            grid-template-areas: 
+            
+                "header     header      header"
+                
+                "sidebar1       contenido       widget"
+                
+                "sidebar1       sidebar2        widget"
+                
+                "footer         footer          footer";
+
+        }
+
+        .grid-area .header{
+
+            background: skyblue;
+
+            grid-column-start: header;
+
+            grid-column-end: header;
+
+        }
+
+        .grid-area .sidebar1{
+
+            background: darkmagenta;
+
+            grid-column: sidebar1;
+
+            grid-row: sidebar1;
+
+        }
+
+        .grid-area .contenido{
+
+            background: white;
+
+            color: black;
+
+            grid-area: contenido;
+
+        }
+
+        .grid-area .widget{
+
+            background: lightpink;
+
+            grid-area: widget;
+
+        }
+
+        .grid-area .sidebar2{
+
+            background: lightgreen;
+
+            grid-area: sidebar2;
+
+        }
+
+        .grid-area .footer{
+
+            background: lightyellow;
+
+            grid-area: footer;
+
+        }
+    
     </style>
 
 </head>
 
-<body>
+<body style="background-color: lightsteelblue;">
     
     <header>
 
@@ -39,7 +130,24 @@
     
     </header>
 
-    <h2>GRID con fracciones</h2>
+    <h2 style="text-align: center;">GRID con area</h2>
+
+    <br>
+
+    <div class="grid-area">
+
+        <div class="header">1</div>
+        <div class="sidebar1">2</div>
+        <div class="contenido">3</div>
+        <div class="widget">4</div>
+        <div class="sidebar2">5</div>
+        <div class="footer">6</div>
+
+    </div>
+
+    <h2 style="text-align: center;">GRID con fracciones</h2>
+
+    <br>
 
      <div class="grid">  
         <div>1</div>
@@ -60,9 +168,38 @@
         <div>16</div>
     </div>
 
-    <h2>GRID con pixeles (CSS3)</h2>
+    <br>
+
+    <h2 style="text-align: center;">GRID con pixeles (CSS3)</h2>
+
+    <br>
 
     <div class="grid-pixeles">  
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+    <br>
+
+    <h2 style="text-align: center;">GRID con repeat (CSS3)</h2>
+
+    <br>
+
+     <div class="grid-repeat">  
         <div>1</div>
         <div>2</div>
         <div>3</div>
